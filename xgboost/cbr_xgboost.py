@@ -2,17 +2,13 @@
 import pandas as pd
 import numpy as np
 import xlwings as xl
-import xgboost as xgb
-xgb_regressor = xgb.XGBRegressor()
-
-# %%
-
+from xgboost import XGBClassifier
 # read data
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
 
-data_file = './xgboost/input-assets0.csv'
-macro_file = './xgboost/input-macro.csv'
+data_file = 'input-assets0.csv'
+macro_file = 'input-macro.csv'
 data_assets = pd.read_csv(data_file, header=0, index_col=0,parse_dates=True, dayfirst=True).dropna()
 data_macro = pd.read_csv(macro_file, header=0, index_col=0,parse_dates=True, dayfirst=True).dropna()
 

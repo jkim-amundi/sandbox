@@ -1,0 +1,20 @@
+dash_app
+├── __init__.py              # It could be empty, package declaration
+├── main.py                  # Application Entry point, Check files existence
+├── config_and_data.py       # Contains configuration loading, markdown, Excel data, etc.
+├── utils.py                 # Contains configuration loading, markdown, Excel data, etc.
+├── layout.py                # Contains only the layout code (see below)
+├── callbacks                # Folder with all callback modules (callbacks are the connection between UI elements and functions)
+│   ├── __init__.py          # Aggregates and registers all callbacks
+│   ├── tables.py            # Contains all your callbacks (or split into multiple modules as needed)
+│   ├── plots.py             # Contains all your callbacks (or split into multiple modules as needed)
+│   ├── modals.py            # Contains all your callbacks (or split into multiple modules as needed)
+│   └── ppt.py               # Contains all your callbacks (or split into multiple modules as needed) 
+└── assets                   # Contains static assets (CSS, images, Markdown files, etc.)
+    ├── Amundi.jpg
+    ├── Institute_View.md
+    ├── FRV.md
+    ├── MacroEdge_Dashboard.xlsx
+    ├── bbg_per_country.xlsx
+    └── MacroEdge.xlsx
+config.json                 # Your JSON configuration file
